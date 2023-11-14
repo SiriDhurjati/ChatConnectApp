@@ -42,13 +42,21 @@ class RegisterViewModel : ViewModel() {
 
             _loading.value = true
 
-            auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        home()
+            if (email.endsWith("@live.tees.ac.uk")) {
+                auth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            home()
+                        } else {
+                            // Handle registration failure
+                        }
+                        _loading.value = false
                     }
-                    _loading.value = false
-                }
+            } else {
+                // Display error message to indicate that only @live.tees.ac.uk emails are allowed
+                _loading.value = false
+
+            }
         }
     }
 }
