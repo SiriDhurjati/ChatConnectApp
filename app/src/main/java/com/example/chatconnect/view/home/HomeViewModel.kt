@@ -17,6 +17,7 @@ class HomeViewModel : ViewModel() {
     init {
         getMessages()
     }
+
     private val _loading = MutableLiveData(false)
     val loading: LiveData<Boolean> = _loading
 
@@ -25,6 +26,12 @@ class HomeViewModel : ViewModel() {
 
     private var _messages = MutableLiveData(emptyList<Map<String, Any>>().toMutableList())
     val messages: LiveData<MutableList<Map<String, Any>>> = _messages
+
+    private val _latitude = MutableLiveData(0.0)
+    val latitude: LiveData<Double> get() = _latitude
+
+    private val _longitude = MutableLiveData(0.0)
+    val longitude: LiveData<Double> get() = _longitude
 
     /**
      * Update the message value as user types
@@ -96,6 +103,12 @@ class HomeViewModel : ViewModel() {
     private fun updateMessages(list: MutableList<Map<String, Any>>) {
         _messages.value = list.asReversed()
     }
+    fun updateLatitude(latitude: Double) {
+        _latitude.value = latitude
+    }
 
+    fun updateLongitude(longitude: Double) {
+        _longitude.value = longitude
+    }
 
     }

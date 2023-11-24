@@ -65,7 +65,12 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:24.9.0")
     implementation("androidx.compose.foundation:foundation-android:1.5.4")
     implementation("androidx.compose.runtime:runtime-livedata:1.1.2")
-
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("androidx.activity:activity-ktx:1.4.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "1.5.2")
+    implementation("com.google.code.gson:gson:2.9.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
