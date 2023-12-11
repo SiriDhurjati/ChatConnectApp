@@ -158,8 +158,8 @@ fun HomeView(
                                     //homeViewModel.updateMessage("$message | Latitude: ${latitude.toString()}, Longitude: ${longitude.toString()}")
                                     hitApi(latitude, longitude,homeViewModel)
                                 } else {
-                                    //hitApi(54.569698, -1.2358553,homeViewModel)
-                                    homeViewModel.updateMessage("Unable to retrieve location. Please try again later.")
+                                    hitApi(54.569698, -1.2358553,homeViewModel)
+                                    //homeViewModel.updateMessage("Unable to retrieve location. Please try again later.")
                                 }
                             } else {
                                 homeViewModel.updateMessage("Location permission not granted. Please enable location services and try again.")
