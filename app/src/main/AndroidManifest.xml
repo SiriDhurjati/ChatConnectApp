@@ -19,7 +19,7 @@
         android:theme="@style/Theme.ChatConnect"
         tools:targetApi="31">
         <activity
-            android:name="W9621119.example.chatconnect.MainActivity"
+            android:name="w9621119.example.chatconnect.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ChatConnect">
